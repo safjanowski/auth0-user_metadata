@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  br
+  .w3-container
+    .w3-card-4.w3-center(style="padding: 15px;")
+      p
+        Name: =name
+      p
+        Surname: =surname
+      p
+        img(src=picture, alt=displayName)
+      form.login-form.form-horizontal(method='post')
+        .form-group
+            label.col-sm-4 City
+            .col-sm-8
+              input.form-control(placeholder='e.g. City',
+              required=false,
+              name='city',
+              type='text',
+              value=city)
+        .form-group
+            label.col-sm-4 State
+            .col-sm-8
+              input.form-control(placeholder='e.g. CA',
+              required=false,
+              name='state',
+              type='text',
+              value=state)
+        .form-group
+            label.col-sm-4 ZIP
+            .col-sm-8
+              input.form-control(placeholder='e.g. 94116',
+              required=false,
+              name='zip',
+              type='text',
+              value=zip)
+        .form-group
+          .col-sm-offset-4.col-sm-8
+            button.login.btn.btn-primary(type='submit') Save
