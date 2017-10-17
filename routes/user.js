@@ -37,9 +37,9 @@ function userMidleware(req, res, next) {
 
             req.user.name = result.given_name
             req.user.surname = result.family_name
-            req.user.city = result.user_metadata.city
-            req.user.state = result.user_metadata.state
-            req.user.zip = result.user_metadata.zip
+            req.user.city = (result.user_metadata || {}).city
+            req.user.state = (result.user_metadata || {}).state
+            req.user.zip = (result.user_metadata || {}).zip
 
             next();
         });
