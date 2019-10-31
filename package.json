@@ -28,6 +28,6 @@
     "xtend": "^4.0.1"
   },
   "devDependencies": {
-    "lodash": ">=4.17.11"
+    "lodash": ">=4.17.13"
   }
 }
